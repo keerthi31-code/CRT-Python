@@ -19,3 +19,18 @@ def reverese(arr):
     return arr
 arr=[1,2,3,4,5]
 print(reverese(arr))
+
+def palindrome(arr):
+    lft=0
+    ryt=len(arr)-1
+    while lft<ryt:
+        lft+=1
+        ryt-=1
+        if arr[lft]!=arr[ryt]:
+            return "not a palidrome"
+            break        
+    else:
+        return "yes"
+arr=[1,2,3,2,1]
+print(palindrome(arr))
+
