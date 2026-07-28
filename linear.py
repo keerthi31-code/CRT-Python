@@ -3,3 +3,4 @@ target=6
 for i in range(len(arr)):
     arr[i]==target
 print(target)
+
