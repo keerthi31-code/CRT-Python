@@ -30,15 +30,33 @@ push(30)
 print(stack)
 print(pop())
 print(peek())
-
+#rev
 stack=[1,2,3,4]
 temp=[]
 while stack:
     temp.append(stack.pop())
 print(temp)
-
+#product
 stack=[2,3,4,5]
 product=1
 while stack:
     product=product*stack.pop()
 print(product)
+
+#minimum ele
+stack=[10,5,8,2,6]
+minimum=stack[0]
+while stack:
+    m=stack.pop()
+    if m<minimum:
+        minimum=m
+print(minimum)
+
+s='hello'
+stack=[]
+rev=''
+for ch in s:
+    stack.append(ch)
+while stack:
+    rev=rev+stack.pop()
+print(rev)
