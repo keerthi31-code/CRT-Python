@@ -33,6 +33,3 @@ def palindrome(arr):
         return "yes"
 arr=[1,2,3,2,1]
 print(palindrome(arr))
-
-
-
