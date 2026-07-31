@@ -101,7 +101,6 @@ n3=node(3)
 n4=node(4)
 n5=node(5)
 sll=SLL()
-sll.sum_of_nodes()
 
 sll.head=n1
 n1.next=n2
@@ -109,6 +108,8 @@ n2.next=n3
 n3.next=n4
 n4.next=n5
 sll.Traversal()
+sll.count_of_nodes()
+sll.sum_of_nodes()
 sll.insert_at_begin(5)
 sll.Traversal()
 

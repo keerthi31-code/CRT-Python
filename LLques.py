@@ -21,7 +21,7 @@ class SLL:
                 sum+=temp.data
                 temp=temp.next
             print("sum of nodes=",sum)
-        
+   
     def count_of_nodes(self):
             temp=self.head
             count=0
@@ -29,6 +29,16 @@ class SLL:
                 count+=1
                 temp=temp.next
             print("count of node:",count)
+
+    def even_elements(self):
+        temp=self.head
+        total=0
+        while temp:
+            if temp.data%2==0:
+                total+=temp.data
+            temp=temp.next
+        print("sum of even elements:",total)
+
 n1=node(1)
 n2=node(2)
 n3=node(3)
@@ -42,6 +52,7 @@ n3.next=n4
 n4.next=n5
 sll.Traversal()
 sll.sum_of_nodes()
-
 sll.count_of_nodes()
-  
+sll.even_elements()
+
+
