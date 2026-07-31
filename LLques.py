@@ -50,6 +50,23 @@ class SLL:
             temp=temp.next
         print("sum of even nodes:",total)
 
+    def search_element(self,val):
+        temp=self.head
+        while temp:
+            if temp.data==val:
+                return True
+            temp=temp.next
+        return False
+    
+    def max_element(self):
+        temp=self.head
+        max1=self.head.data
+        while temp:
+            if temp.data >= max1:
+                max1=temp.data
+            temp=temp.next
+        return max1
+
 n1=node(1)
 n2=node(2)
 n3=node(3)
@@ -66,5 +83,7 @@ sll.sum_of_nodes()
 sll.count_of_nodes()
 sll.even_elements()
 sll.sum_of_evenNodes()
+print(sll.search_element(7))
+print(sll.max_element())
 
 
