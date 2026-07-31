@@ -1,3 +1,4 @@
+'''
 class node:
     def __init__(self,data):
         self.data=data
@@ -16,12 +17,13 @@ while temp:
     print(temp.data)
     temp=temp.next
 
-
+'''
     
 class node:
     def __init__(self,data):
         self.data=data
         self.next=None
+
 class SLL:
     def __init__(self):
         self.head=None
@@ -33,6 +35,7 @@ class SLL:
                 while temp:
                     print(temp.data, end="-> ")
                     temp=temp.next
+
     def insert_at_begin(self, data):
         new=node(data)
         new.next=self.head
@@ -60,11 +63,13 @@ class SLL:
             prev=temp
             temp=temp.next
         prev.next=None
+
     def delete_at_end2(self):
         temp=self.head
         while temp.next.next is not None:
             temp=temp.next
         temp.next=None
+
     def delete_at_pos(self,pos):
             temp=self.head
             prev=None
@@ -72,12 +77,32 @@ class SLL:
                 prev=temp
                 temp=temp.next
             prev.next=temp.next
-n1=node(10)
-n2=node(20)
-n3=node(30)
-n4=node(40)
-n5=node(50)
+
+    def sum_of_nodes(self):
+        temp=self.head
+        sum=0
+        while temp:
+            sum+=temp.next
+            temp=temp.next
+        return "sum of nodes:",sum
+    
+    def count_of_nodes(self):
+        temp=self.head
+        count=0
+        while temp:
+            count+=1
+            temp=temp.next
+        return "count of node:",count
+
+
+n1=node(1)
+n2=node(2)
+n3=node(3)
+n4=node(4)
+n5=node(5)
 sll=SLL()
+sll.sum_of_nodes()
+
 sll.head=n1
 n1.next=n2
 n2.next=n3
@@ -90,8 +115,8 @@ sll.Traversal()
 sll.insert_at_end(60)
 sll.Traversal()
 
-sll.insert_at_pos(25,2)
-sll.Traversal()
+# sll.insert_at_pos(25,2)
+# sll.Traversal()
 
 sll.delete_at_begin()
 sll.Traversal()
@@ -105,3 +130,5 @@ sll.Traversal()
 sll.delete_at_pos(3)
 sll.Traversal()
 
+sll.count_of_nodes()
+sll.Traversal
