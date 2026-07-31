@@ -66,7 +66,22 @@ class SLL:
                 max1=temp.data
             temp=temp.next
         return max1
+    def nth_node_begin(self,pos):
+        temp=self.head
+        for i in range(pos):
+            temp=temp.next
+        return temp.data
 
+    def nth_node_end(self,pos):
+        temp=self.head
+        c=0
+        while temp:
+            c+=1
+            temp=temp.next
+        temp=self.head
+        for i in range(c-pos):
+            temp=temp.next
+        return temp.data
 n1=node(1)
 n2=node(2)
 n3=node(3)
@@ -85,5 +100,6 @@ sll.even_elements()
 sll.sum_of_evenNodes()
 print(sll.search_element(7))
 print(sll.max_element())
-
+print(sll.nth_node_begin(2))
+print(sll.nth_node_end(4))
 
