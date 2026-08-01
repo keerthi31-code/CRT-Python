@@ -40,6 +40,16 @@ class DLL:
         temp.next.prev=new
         new.prev=temp
         temp.next=new
+    def del_at_begin(self):
+        temp=self.head
+        self.head=temp.next
+        self.head.prev=None
+    def del_at_end(self):
+        temp=self.head
+        while temp.next:
+            temp=temp.next
+        temp.prev.next=None
+
 
 
 n1=node(1)
@@ -58,12 +68,15 @@ n4.prev=n3
 dll.Traversal()
 dll.reverse_ele()
 dll.Traversal()
-
 dll.insert_ele_begin(0)
 dll.Traversal()
 dll.insert_at_end(5)
 dll.Traversal()
 dll.insert_at_pos(22,2)
+dll.Traversal()
+dll.del_at_begin()
+dll.Traversal
+dll.del_at_end()
 dll.Traversal()
 
 
