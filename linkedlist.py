@@ -78,23 +78,6 @@ class SLL:
                 temp=temp.next
             prev.next=temp.next
 
-    def sum_of_nodes(self):
-        temp=self.head
-        sum=0
-        while temp:
-            sum+=temp.next
-            temp=temp.next
-        return "sum of nodes:",sum
-    
-    def count_of_nodes(self):
-        temp=self.head
-        count=0
-        while temp:
-            count+=1
-            temp=temp.next
-        return "count of node:",count
-
-
 n1=node(1)
 n2=node(2)
 n3=node(3)
@@ -108,16 +91,15 @@ n2.next=n3
 n3.next=n4
 n4.next=n5
 sll.Traversal()
-sll.count_of_nodes()
-sll.sum_of_nodes()
+
 sll.insert_at_begin(5)
 sll.Traversal()
 
 sll.insert_at_end(60)
 sll.Traversal()
 
-# sll.insert_at_pos(25,2)
-# sll.Traversal()
+sll.insert_at_pos(25,2)
+sll.Traversal()
 
 sll.delete_at_begin()
 sll.Traversal()
@@ -131,5 +113,3 @@ sll.Traversal()
 sll.delete_at_pos(3)
 sll.Traversal()
 
-sll.count_of_nodes()
-sll.Traversal
