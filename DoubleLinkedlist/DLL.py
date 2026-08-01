@@ -9,7 +9,7 @@ class DLL:
     def Traversal(self):
         temp=self.head
         while temp:
-            print(temp.data)
+            print(temp.data,end=" ")
             temp=temp.next
     #reverse traversing
     def reverse_ele(self):
@@ -17,7 +17,7 @@ class DLL:
         while temp.next:
             temp=temp.next
         while temp:
-            print(temp.data,end='->')
+            print("rev:",temp.data)
             temp=temp.prev
     def insert_ele_begin(self,data):
         new=node(data)
@@ -49,6 +49,14 @@ class DLL:
         while temp.next:
             temp=temp.next
         temp.prev.next=None
+    def del_at_pos(self,pos):
+        temp=self.head
+        for i in range(pos-1):
+            temp=temp.next
+        temp.prev.next=temp.next
+        temp.next.prev=temp.prev
+
+
 
 
 
@@ -78,7 +86,8 @@ dll.del_at_begin()
 dll.Traversal
 dll.del_at_end()
 dll.Traversal()
-
+dll.del_at_pos(4)
+dll.Traversal()
 
 
 
