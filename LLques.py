@@ -82,6 +82,7 @@ class SLL:
         for i in range(c-pos):
             temp=temp.next
         return temp.data
+    
 n1=node(1)
 n2=node(2)
 n3=node(3)
@@ -103,3 +104,17 @@ print(sll.max_element())
 print(sll.nth_node_begin(2))
 print(sll.nth_node_end(4))
 
+#####
+def removeNthFromEnd(self, head, n):
+        temp=head
+        c=0
+        while temp:
+            c+=1
+            temp=temp.next
+        if c==n:
+            return head.next
+        temp=head
+        for i in range(c-n-1):
+            temp=temp.next
+        temp.next=temp.next.next
+        return head
