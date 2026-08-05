@@ -63,6 +63,25 @@ def delete_one(root,key):
         else:
             return root.right
     return root
+def delete_root(root,key):
+# we can delete root either from replacing mimimum element of right subtree or max eleminent fron left subtree
+    if root is None:
+            return None
+    if key<root.data:
+            root.left=delete_root(root.left, key)
+    elif key>root.data:
+            root.right=delete_root(root.right,key)
+    else:
+            if root.left is None:
+                return root.right
+            elif root.right is None:
+                return root.left
+            temp=root.right
+            while temp.left:
+                temp=temp.left
+            root.data=temp.data
+            root.right=delete_root(root.right,temp.data)
+    return root
 
 root = Node(20)
 root.left = Node(10)
@@ -87,4 +106,7 @@ inorder(root)
 
 root=delete_one(root, 15)
 print("after deletion one node:")
+inorder(root)
+root=delete_root(root, 20)
+print("after deletion of root:")
 inorder(root)
