@@ -110,3 +110,4 @@ inorder(root)
 root=delete_root(root, 20)
 print("after deletion of root:")
 inorder(root)
+
